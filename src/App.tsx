@@ -1,10 +1,25 @@
+import { Container, Grid } from "@mui/material";
+import SearchHeader from "./SearchHeader";
+import SimpleSearch from "./SimpleSearch";
+import ComplexSearch from "./ComplexSearch";
+import SearchFooter from "./SearchFooter";
 import "./styles.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Container>
+      <Grid container>
+        <Grid item xs={12}>
+          <SearchHeader />
+        </Grid>
+        <Grid item xs={12}>
+          {/* <SimpleSearch /> */}
+          <ComplexSearch />
+        </Grid>
+        <Grid item xs={12}>
+          <SearchFooter />
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
